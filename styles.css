@@ -1,0 +1,119 @@
+@font-face {
+    font-family: "STARWARS";
+    src:
+        url("./assets/STARWARS/STARWARS.eot") format("eot"),
+        url("./assets/STARWARS/STARWARS.woff") format("woff"),
+        url("./assets/STARWARS/STARWARS.ttf") format("truetype"),
+        url("./assets/STARWARS/STARWARS.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+
+/* General */
+* {
+    margin: 0;
+    padding: 1%;
+}
+
+body {
+    background-color: var(--eerie-black);
+    color: var(--floral-white);
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* colors */
+:root {
+    --floral-white: #fffcf2ff;
+    --pale-silver: #ccc5b9ff;
+    --black-olive: #403d39ff;
+    --eerie-black: #252422ff;
+    --flame: rgb(235, 40, 40);
+}
+
+/* Header */
+
+p {
+    text-align: center;
+    background-color: black;
+    padding: 2%;
+    border-radius: 3px;
+}
+
+p span {
+    color: var(--flame);
+}
+
+header {
+    position: sticky;
+    display: flex;
+    align-content: space-between;
+    background-color: rgba(0, 0, 0, 0.658);
+    padding: 1% 0% 0%;
+    margin: -2%;
+    align-items: center;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--flame);
+    font-size: 1.5em;
+}
+
+header h1 a{
+    font-family: "STARWARS";
+    font-size: 1.2em;
+    margin: 5px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    padding: 2%;
+}
+
+ul li a:hover {
+    color: white;
+    transition: 1s;
+}
+
+/* li a{
+    display: block;
+    background-color: var(--eerie-black);    
+} */
+.menu {
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+}
+
+.menu i {
+    font-size: 2em;
+    padding-right: 12px;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: rgba(12, 12, 12, 0.658);
+    min-width: 160px;
+    padding: 12PX 16PX;
+    z-index: 5;
+    top: 61PX;
+    right: 0px;
+
+}
+
+.menu:hover .dropdown {
+    display: block;
+}
+
+/* main */
+
+/* footer */
