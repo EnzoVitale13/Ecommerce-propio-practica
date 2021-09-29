@@ -18,23 +18,31 @@
 }
 
 body {
-    background-color: var(--eerie-black);
+    background-color: var(--gris-oscuro);
     color: var(--floral-white);
     font-family: 'Montserrat', sans-serif;
 }
 
+p,
+li,
+button {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--pale-silver);
+}
+
 /* colors */
 :root {
+    --gris-oscuro: rgb(23,23,23);
     --floral-white: #fffcf2ff;
     --pale-silver: #ccc5b9ff;
     --black-olive: #403d39ff;
     --eerie-black: #252422ff;
-    --flame: rgb(235, 40, 40);
+    --flame: rgb(201, 16, 16);
 }
 
 /* Header */
 
-p {
+.hello p {
     text-align: center;
     background-color: black;
     padding: 2%;
@@ -47,6 +55,7 @@ p span {
 
 header {
     position: sticky;
+    top: 0;
     display: flex;
     align-content: space-between;
     background-color: rgba(0, 0, 0, 0.658);
@@ -55,16 +64,32 @@ header {
     align-items: center;
 }
 
+
 header a {
-    text-decoration: none;
+    display: flex;
     color: var(--flame);
-    font-size: 1.5em;
+    text-decoration: none;
+    /* font-size: 1.5em; */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 
-header h1 a{
-    font-family: "STARWARS";
-    font-size: 1.2em;
-    margin: 5px;
+header a i {
+    font-size: 2.5em;
+    padding: 0% 1%;
+}
+
+header a h1 {
+    font-family: 'STARWARS';
+    font-size: 1.3em;
+    margin: 2% -4% 0% 0%;
+    padding: 1%;
+}
+
+header a:hover {
+    color: var(--floral-white);
+    transition: 1s;
 }
 
 ul {
@@ -78,7 +103,7 @@ li {
     padding: 2%;
 }
 
-ul li a:hover {
+li a:hover {
     color: white;
     transition: 1s;
 }
@@ -105,7 +130,7 @@ ul li a:hover {
     min-width: 160px;
     padding: 12PX 16PX;
     z-index: 5;
-    top: 61PX;
+    top: 45PX;
     right: 0px;
 
 }
@@ -115,5 +140,48 @@ ul li a:hover {
 }
 
 /* main */
+span h2{
+    text-align: center;
+    background-color: black;
+    padding: 2%;
+    border-radius: 3px;
+    margin: 5% 0% -5% 0%; 
+}
+main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+main img {
+    height: 150px;
+}
+
+/* product */
+.product{
+    background-color:var(--eerie-black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10% 0;
+    border-radius: 5px;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 3%;
+    box-shadow: 0px 4px 6px 1px var(--flame);
+}
+
+.product button {
+    margin: 5% 0;
+    width: 90%;
+    background-color: var(--flame);
+    border-radius: 15px;
+    border: 2px solid black;
+    cursor: pointer;
+    padding: 4% 15%;
+    font-size: 1em;
+    font-weight: 800;
+}
 
 /* footer */
